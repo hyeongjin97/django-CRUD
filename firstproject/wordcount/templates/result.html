@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div style="text-align: center;">
+        <h1>단어를 다 세었습니다</h1>
+        <h3>당신이 입력한 문장은:{{fulltext}}입니다</h3>
+        <h3>총 단어수는 {{sentence_count}}개 입니다</h3>
+        <br>
+        {%for text,count in word_count%}
+        {{text}}:{{count}}
+        <br>
+        {%endfor%}
+        <h3>띄어쓰기를 포함한 총 글자 수는:{{all_count}}입니다.</h3>
+        <h3>띄어쓰기를 제외한 총 글자 수는:{{all_exceptCount}}입니다.</h3>
+        <a href="{%url 'home'%}">돌아가기</a>
+    </div>
+</body>
+</html>
